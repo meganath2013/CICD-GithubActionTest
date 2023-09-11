@@ -1,10 +1,12 @@
 describe('empty spec', () => {
   it('passes', () => {
-    cy.visit('google.co.in')
+    cy.visit('/')
 
-    cy.log('logging into gmail document')
-    cy.get('input[type="email"]').type('meganathtest@gmail.com')
-    cy.get('button').contains('Next').click()
+    cy.log('logging into NS-CanI console')
+    cy.get('input[id="username"]').type('meganath@canimmunize.ca')
+    cy.get('input[id="password"]').type('Mice@2020')
+    
+    cy.get('button').contains('Continue').click()
 
     
     //cy.visit('chrome://extensions')

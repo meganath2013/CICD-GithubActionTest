@@ -5,7 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('before:browser:launch', (browser,launchOptions)=>{
-        launchOptions.extensions.push('Grammarly')
+        launchOptions.extensions.push('Test')
 
         return launchOptions
 
@@ -13,6 +13,6 @@ module.exports = defineConfig({
   }},
   video:true,
 
-  baseUri: "https:www.google.com",
+  baseUri: "https://novascotia.flow.qa.canimmunize.dev",
 
 });
