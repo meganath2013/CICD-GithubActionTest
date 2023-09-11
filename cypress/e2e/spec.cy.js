@@ -1,6 +1,6 @@
 describe('empty spec', () => {
   it('passes', () => {
-    cy.visit('/')
+    cy.visit('https://novascotia.flow.qa.canimmunize.dev')
 
     cy.log('logging into NS-CanI console')
     cy.get('input[id="username"]').type('meganath@canimmunize.ca')
