@@ -1,14 +1,17 @@
-describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('https://novascotia.flow.qa.canimmunize.dev')
 
-    cy.log('logging into NS-CanI console')
-    cy.get('input[id="username"]').type('meganath@canimmunize.ca')
-    cy.get('input[id="password"]').type('Mice@2020')
-    
-    cy.get('button').contains('Continue').click()
 
-    
-    //cy.visit('chrome://extensions')
+describe('Log in to ClinicFlow console', () => {
+
+  it('login as Super Admin', () => {
+    cy.visit('https://novascotia.flow.qa.canimmunize.dev');
+
+    /* Console UI login as Super Admin */
+    cy.get('input[name="username"]').type('meganath@canimmunize.ca');
+    cy.get('input[name="password"]').type('Mice@2020', { log: false });
+    cy.get('button').contains('Continue').click({force:true});
+
+    /* Validate user lands on home page */
+    cy.url().should('contain', '/home');
+    cy.contains('Welcome to ClinicFlow');
   })
 })
