@@ -1,5 +1,8 @@
 name: Chrome
 on: push
+env:
+  CYPRESS_username: ${{secrets.CYPRESS_USERNAME}}
+  CYPRESS_password: ${{secrets.CYPRESS_PASSWORD}}
 jobs:
   chrome:
     runs-on: ubuntu-22.04
