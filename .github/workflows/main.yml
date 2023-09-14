@@ -1,8 +1,5 @@
 name: Chrome
 on: push
-env:
-  CYPRESS_username: ${{secrets.CYPRESS_USERNAME}}
-  CYPRESS_password: ${{secrets.CYPRESS_PASSWORD}}
 jobs:
   chrome:
     runs-on: ubuntu-22.04
@@ -12,6 +9,10 @@ jobs:
       - uses: cypress-io/github-action@v6
         with:
           browser: chrome
+          env: true
+          env:
+            CYPRESS_username: ${{secrets.CYPRESS_USERNAME}}
+            CYPRESS_password: ${{secrets.CYPRESS_PASSWORD}}
       - uses: actions/upload-artifact@v3
         if: always()
         with:
