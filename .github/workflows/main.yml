@@ -10,9 +10,9 @@ jobs:
         with:
           browser: chrome
           env: true
-          env:
-            CYPRESS_username: ${{secrets.CYPRESS_USERNAME}}
-            CYPRESS_password: ${{secrets.CYPRESS_PASSWORD}}
+        env:
+          CYPRESS_username: ${{secrets.CYPRESS_USERNAME}}
+          CYPRESS_password: ${{secrets.CYPRESS_PASSWORD}}
       - uses: actions/upload-artifact@v3
         if: always()
         with:
