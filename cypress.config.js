@@ -14,7 +14,7 @@ module.exports = defineConfig({
   },
   baseUrl: "https://novascotia.flow.qa.canimmunize.dev",
   env:{
-    username:"",
+    username:"meganath@canimmunize.ca",
     password:""
   },
 },
