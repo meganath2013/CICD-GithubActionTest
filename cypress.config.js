@@ -11,12 +11,15 @@ module.exports = defineConfig({
         return launchOptions
 
       })
-  }},
+  },
+  baseUrl: "https://novascotia.flow.qa.canimmunize.dev",
+  env:{
+    username:"",
+    password:""
+  },
+},
   video:true,
 
-  baseUri: "https://novascotia.flow.qa.canimmunize.dev",
-env:{
-  username:"",
-  password:""
-}
+  
+
 });

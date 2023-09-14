@@ -3,7 +3,7 @@
 describe('Log in to ClinicFlow console', () => {
 
   it('login as Super Admin', () => {
-    cy.visit('https://novascotia.flow.qa.canimmunize.dev');
+    cy.visit('/');
     /* Console UI login as Super Admin */
     cy.get('input[name="username"]').type(Cypress.env('username'));
     cy.get('input[name="password"]').type(Cypress.env('password'), { log: false });
