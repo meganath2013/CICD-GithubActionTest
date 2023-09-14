@@ -15,5 +15,8 @@ module.exports = defineConfig({
   video:true,
 
   baseUri: "https://novascotia.flow.qa.canimmunize.dev",
-
+env:{
+  username:"",
+  password:""
+}
 });
