@@ -1,5 +1,4 @@
 
-
 describe('Log in to ClinicFlow console', () => {
 
   it('login as Super Admin', () => {
